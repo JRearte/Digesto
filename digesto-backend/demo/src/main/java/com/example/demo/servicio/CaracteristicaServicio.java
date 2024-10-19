@@ -17,7 +17,7 @@ import com.example.demo.repositorio.ICaracteristicaRepositorio;
 public class CaracteristicaServicio implements ICaracteristicaServicio{
 
     @Autowired
-    private ICaracteristicaServicio repositorio;
+    private ICaracteristicaRepositorio repositorio;
 
     /**
      * Obtiene un listado de todas las características disponibles en el sistema.
