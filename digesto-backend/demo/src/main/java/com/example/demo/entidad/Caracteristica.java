@@ -1,5 +1,6 @@
 package com.example.demo.entidad;
 
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,14 +15,15 @@ import lombok.Setter;
  * @author REARTE Jonatan Ramón
  */
 
- @Entity 
- @Getter 
- @Setter
+@Entity
+@Getter
+@Setter
 
- public class Caracteristica{
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    
-    private String nombre;
- }
+public class Caracteristica{
+   @Id
+   @GeneratedValue(strategy = GenerationType.IDENTITY)
+   private Long id;
+   
+   private String nombre;
+
+}

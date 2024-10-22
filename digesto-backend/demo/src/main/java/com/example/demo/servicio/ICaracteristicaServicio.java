@@ -6,7 +6,6 @@ import java.util.List;
 /**
  * @author REARTE Jonatan Ramon
  */
-
 public interface ICaracteristicaServicio {
     public List <Caracteristica> get();
     public void save(Caracteristica caracteristica);
