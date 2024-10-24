@@ -24,6 +24,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 
 @RestController
 public class CaracteristicaControlador {
+    
     @Autowired
     private ICaracteristicaServicio servicio;
 
@@ -50,7 +51,7 @@ public class CaracteristicaControlador {
      * @param id → identificador único de la característica
      * @param requestBody 
      */
-    @PutMapping("/modificar/caracteristica")
+    @PutMapping("/modificar/caracteristica/{id}")
     public void modificarCaracteristica(@PathVariable Long id, @RequestBody Map<String, String> requestBody){
         String nuevo_nombre = requestBody.get("nombre");
 

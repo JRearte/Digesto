@@ -8,6 +8,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.entidad.Caracteristica;
 import com.example.demo.entidad.Documento;
 import com.example.demo.servicio.IDocumentoServicio;
 
@@ -34,7 +35,7 @@ public class DocumentoControlador {
         servicio.save(d);
     }
 
-    @PutMapping("/modificar/documento")
+    @PutMapping("/modificar/documento/{id}")
     public void modificarDocumento(@PathVariable Long id, @RequestBody Map<String, String> requestBody)
     {
         String nuevo_nombre = requestBody.get("nombre");
@@ -56,4 +57,20 @@ public class DocumentoControlador {
     public void eliminarDocumento(@RequestBody Documento d){
         servicio.delete(d.getId());
     }
+
+    @GetMapping("/traer/etiquetas/documento/{id}")
+    public List<Caracteristica> getEtiquetas(@PathVariable Long id){
+        return servicio.getEtiquetas(id);
+    }
+
+    @PutMapping("/guardar/etiquetas/documento/{id}")
+    public void guardarEtiquetas(@PathVariable Long id, @RequestBody List<Caracteristica> c){
+        servicio.agregarEtiquetas(id, c);
+    }
+
+    @DeleteMapping("/eliminar/etiqueta/documento/{idD}/{idC}")
+    public void eliminarEtiqueta(@PathVariable Long idD, @PathVariable Long idC){
+        servicio.eliminarEtiqueta(idD,idC);
+    }
+
 }

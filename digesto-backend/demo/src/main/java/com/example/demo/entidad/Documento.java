@@ -1,11 +1,15 @@
 package com.example.demo.entidad;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -30,4 +34,11 @@ public class Documento {
     private LocalDate fecha;
     private String url;
 
+    @ManyToMany
+    @JoinTable(
+        name = "documento_caracteristica",
+        joinColumns = @JoinColumn(name = "documento_id"),
+        inverseJoinColumns = @JoinColumn(name = "caracteristica_id")
+    )
+    private List<Caracteristica> caracteristicas;
 }
