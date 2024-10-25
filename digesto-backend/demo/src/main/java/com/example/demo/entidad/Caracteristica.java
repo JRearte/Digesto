@@ -1,13 +1,9 @@
 package com.example.demo.entidad;
 
-
-import java.util.List;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,17 +14,14 @@ import lombok.Setter;
  * @author REARTE Jonatan Ramón
  */
 
-@Entity
-@Getter
-@Setter
+ @Entity 
+ @Getter 
+ @Setter
 
-public class Caracteristica{
-   @Id
-   @GeneratedValue(strategy = GenerationType.IDENTITY)
-   private Long id;
-   
-   private String nombre;
-
-   @ManyToMany(mappedBy = "caracteristicas")
-   private List<Documento> documentos;
-}
+ public class Caracteristica{
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
+    private String nombre;
+ }
