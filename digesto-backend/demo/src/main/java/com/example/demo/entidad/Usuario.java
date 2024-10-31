@@ -24,13 +24,13 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;   
 
-    private String legajo;
-    private Long dni;
-    private String nombre;
-    private String apellido;
-    private LocalDate fechaNac;
-    private String mail;
-    private String nomUsuario;
-    private String pass;
-    private String tipoRol;
+    private String legajo; //
+    private Long dni;       //
+    private String nombre;  //
+    private String apellido; //
+    private LocalDate fechaNac; //
+    private String mail;      //
+    private String nomUsuario; //
+    private String pass;    //
+    private String tipoRol;  //
 }
