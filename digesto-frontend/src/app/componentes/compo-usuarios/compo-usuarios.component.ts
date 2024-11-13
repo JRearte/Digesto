@@ -59,5 +59,4 @@ export class CompoUsuariosComponent implements OnInit {
     });
   }
 
-
 }
