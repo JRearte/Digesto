@@ -3,17 +3,18 @@ package com.example.demo.controlador;
 import java.util.List;
 import java.util.Map;
 
-import com.example.demo.entidad.Caracteristica;
-import com.example.demo.servicio.ICaracteristicaServicio;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.entidad.Caracteristica;
+import com.example.demo.servicio.ICaracteristicaServicio;
 
 /**
  * Este controlador maneja las operaciones CRUD de las características que
@@ -21,7 +22,7 @@ import org.springframework.web.bind.annotation.PutMapping;
  * 
  * @author REARTE Jonatan Ramon
  */
-
+@CrossOrigin(origins = "http://localhost:4200") 
 @RestController
 public class CaracteristicaControlador {
     @Autowired
