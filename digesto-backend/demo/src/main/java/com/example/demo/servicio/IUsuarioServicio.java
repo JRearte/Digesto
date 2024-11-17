@@ -16,4 +16,6 @@ public interface IUsuarioServicio {
     public void save (Usuario u);
     public void delete (Usuario u);
     public Usuario find(Long Id);
+    public Usuario findByMail(String mail);
+    public boolean validarUsuario(String mail, String pass);
 }

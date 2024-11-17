@@ -10,6 +10,8 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -74,6 +76,20 @@ public class UsuarioControlador {
     @DeleteMapping("/eliminar/usuario")
     public void eliminarAlumno(@RequestBody Usuario usuario){
     servicioUsuario.delete(usuario);
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<String> login(@RequestBody Map<String, String> requestBody) {
+        String mail = requestBody.get("mail");
+        String pass = requestBody.get("pass");
+
+        boolean autenticado = servicioUsuario.validarUsuario(mail, pass);
+
+        if (autenticado) {
+            return ResponseEntity.ok("Ingreso exitoso");
+        } else {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Usuario invalido");
+        }
     }
         
 }

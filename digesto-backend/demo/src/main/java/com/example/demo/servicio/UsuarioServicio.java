@@ -55,4 +55,14 @@ public class UsuarioServicio implements IUsuarioServicio{
         return usuarioRepositorio.findById(id).orElse(null);
     }
     
+    @Override
+    public Usuario findByMail(String mail) {
+        return usuarioRepositorio.findByMail(mail);
+    }
+
+    @Override
+    public boolean validarUsuario(String mail, String pass) {
+        Usuario usuario = usuarioRepositorio.findByMail(mail); 
+        return usuario != null && usuario.getPass().equals(pass);
+    }
 }

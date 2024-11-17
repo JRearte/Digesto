@@ -24,4 +24,9 @@ export class ServiUsuariosService {
   eliminarUsuario(usuario: any): Observable<any[]> {
     return this.http.delete<any[]>(`${this.url}/eliminar/usuario/${usuario.id}`);
   }
+
+  login(mail: string, pass: string): Observable<any> {
+    const body = { mail, pass };
+    return this.http.post(`${this.url}/login`, body);
+  }
 }
