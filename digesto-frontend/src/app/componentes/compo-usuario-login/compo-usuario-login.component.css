@@ -1,0 +1,37 @@
+.Contenedor {
+ margin: 0,5rem;
+ padding: 0,8rem;
+ border-color: black;
+ border: 0,5rem;
+ background-color: rgb(224, 222, 223);
+ border: solid black;
+ 
+}
+.control{
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-color: black;
+    border-radius: 20px; 
+    
+}
+
+.btn{
+ 	color:#000000;
+     background-color: #c3b4e0;
+     box-shadow: 2px 2px 4px 0 rgba(20, 20, 20, 0.3);
+}
+.master{
+    margin: 0,5rem;
+    padding: 1rem;
+    border-color: black;
+    border: 0rem;
+    background-color: rgb(224, 222, 223);
+    border: solid #f5f5f5;
+    margin-top: 5rem;
+    box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
+}
+.divBtn{
+    padding-left: 3rem;
+    
+    border-radius: 20px;
+}
