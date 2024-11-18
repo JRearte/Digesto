@@ -4,15 +4,9 @@
         <form [formGroup]="formularioLog" (ngSubmit)="login()">
             <div class="control">
                 <input type="email" id="email" name="email" placeholder="Email usuario" formControlName="email" value="usuario@ejemplo.com">
-                <div *ngIf="formularioLog.controls['email'].touched && formularioLog.controls['email'].errors?.['email']" class="alerta">
-                    <h4>Email obligatorio</h4>
-                </div>
             </div>
             <div class="control">
                 <input type="password" id="password" name="password" placeholder="Password" formControlName="password" value="123456">
-                <div *ngIf="formularioLog.controls['password'].touched && formularioLog.controls['password'].errors?.['password']" class="alerta">
-                    <h4>Password obligatorio</h4>
-                </div>
             </div>
             <button [disabled]="formularioLog.invalid" class="btn">Ingresar</button>
         </form>
