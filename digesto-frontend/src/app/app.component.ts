@@ -5,10 +5,12 @@ import { CompoDocumentoComponent } from "./componentes/compo-documento/compo-doc
 import { CompoUsuariosComponent } from './componentes/compo-usuarios/compo-usuarios.component';
 import { CompoUsuarioLoginComponent } from './componentes/compo-usuario-login/compo-usuario-login.component';
 import { PdfComponent } from './componentes/pdf/pdf.component';
+import { CompoPrincipalComponent } from './componentes/compo-principal/compo-principal.component';
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, PdfComponent, CompoUsuarioLoginComponent, CompoUsuariosComponent, CompoCaracteristicaComponent, CompoDocumentoComponent],
+  imports: [RouterOutlet, CompoPrincipalComponent, PdfComponent, CompoUsuarioLoginComponent, CompoUsuariosComponent, CompoCaracteristicaComponent, CompoDocumentoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
