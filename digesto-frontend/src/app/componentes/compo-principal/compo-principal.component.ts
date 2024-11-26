@@ -1,13 +1,18 @@
-
-import { Component, NgModule } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Routes } from '@angular/router';
 
 
 @Component({
-    selector: 'app-compo-principal',
-    standalone: true,
-    imports: [FormsModule],
-    templateUrl: './compo-principal.component.html',
-    styleUrl: './compo-principal.component.css'
-    })
+  selector: 'app-compo-principal',
+  standalone: true,
+  imports: [FormsModule],
+  templateUrl: './compo-principal.component.html',
+  styleUrls: ['./compo-principal.component.css']
+
+})
+
+export class CompoPrincipalComponent implements OnInit{
+  constructor() {}
+  ngOnInit(): void {
+  }
+}
